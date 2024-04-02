@@ -2,25 +2,24 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int [] nums = new int[5];
-        try {
-            //block of code to monitor for errors
-            System.out.println("In try 1");
-            errorMethod(nums);
-            System.out.println("In try 2");
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("In catch 1");
-        }
-        catch (Exception e) {
-            //handler for Exception
-            System.out.println("In catch 2");
+
+        int [] numer = {4, 8, 16, 32};
+        int[] denom = {2, 0, 4, 4};
+
+        for(int i=0; i<numer.length; i++) {
+            try {
+                System.out.println(numer[1] / denom[i]);
+            }
+            catch (Exception e) {
+                System.out.println("You cant divide by zero!");
+
+            }
 
         }
-        System.out.println("Rest of program");
-    }
 
-    public  static  void errorMethod(int [] nums){
-        nums[10] = 25;
+
+
 
     }
+
 }
